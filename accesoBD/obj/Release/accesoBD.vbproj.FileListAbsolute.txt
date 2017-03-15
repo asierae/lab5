@@ -1,0 +1,8 @@
+C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\accesoBD\bin\Release\accesoBD.dll
+C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\accesoBD\bin\Release\accesoBD.pdb
+C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\accesoBD\bin\Release\accesoBD.xml
+C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\accesoBD\obj\Release\accesoBD.Resources.resources
+C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\accesoBD\obj\Release\accesoBD.vbproj.GenerateResource.Cache
+C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\accesoBD\obj\Release\accesoBD.dll
+C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\accesoBD\obj\Release\accesoBD.xml
+C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\accesoBD\obj\Release\accesoBD.pdb
