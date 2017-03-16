@@ -43,6 +43,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -85,13 +89,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Alumno.aspx" />
-    <Content Include="App_Data\HAS.xml" />
+    <Content Include="App_Data\HAS.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\SEG.xml" />
     <Content Include="App_Data\XSLTFile.xsl" />
     <Content Include="CambiarPassword.aspx" />
     <Content Include="Confirmar.aspx" />
     <Content Include="Estadisticas.aspx" />
+    <Content Include="ExportarTareas.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="ImportarTareasXMLDocument.aspx" />
+    <Content Include="ImportarVDataset.aspx" />
     <Content Include="InsertarTarea.aspx" />
     <Content Include="InstanciarTarea.aspx" />
     <Content Include="LogOut.aspx" />
@@ -133,11 +142,32 @@
       <DependentUpon>Estadisticas.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="ExportarTareas.aspx.designer.vb">
+      <DependentUpon>ExportarTareas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportarTareas.aspx.vb">
+      <DependentUpon>ExportarTareas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Home.aspx.designer.vb">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.vb">
       <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ImportarTareasXMLDocument.aspx.designer.vb">
+      <DependentUpon>ImportarTareasXMLDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportarTareasXMLDocument.aspx.vb">
+      <DependentUpon>ImportarTareasXMLDocument.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ImportarVDataset.aspx.designer.vb">
+      <DependentUpon>ImportarVDataset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportarVDataset.aspx.vb">
+      <DependentUpon>ImportarVDataset.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="InsertarTarea.aspx.designer.vb">
@@ -244,6 +274,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

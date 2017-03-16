@@ -47,9 +47,9 @@
                 <li><a href="/TareasProfesor.aspx"><i class="fa fa-file-o fa-fw"></i>VerTareas</a></li>
                 <li><a href="/Estadisticas.aspx"><i class="fa fa-table fa-fw"></i>Estadisticas</a></li>
                 <li><a href="/InsertarTarea.aspx"><i class="fa fa-tasks fa-fw"></i>Insertar tarea</a></li>
-                <li><a href="#"><i class="fa fa-calendar fa-fw"></i>Importar</a></li>
-                <li><a href="#"><i class="fa fa-book fa-fw"></i>Exportar</a></li>
-                <li><a href="#"><i class="fa fa-pencil fa-fw"></i>Opcion1</a></li>
+                <li><a href="#"><i class="fa fa-calendar fa-fw"></i>Importar Tareas(XMLDocument)</a></li>
+                <li><a href="#"><i class="fa fa-book fa-fw"></i>Exportar Tareas</a></li>
+                <li><a href="#"><i class="fa fa-pencil fa-fw"></i>Exportar JSON</a></li>
                 <li><a href="#"><i class="fa fa-cogs fa-fw"></i>Opcion2</a></li>
             </ul>
         </div>

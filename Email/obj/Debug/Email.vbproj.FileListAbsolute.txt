@@ -6,3 +6,6 @@ C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\Email\obj
 C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\Email\obj\Debug\Email.dll
 C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\Email\obj\Debug\Email.xml
 C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\Email\obj\Debug\Email.pdb
+C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\Email\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\Email\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\Email\obj\Debug\Email.vbprojResolveAssemblyReference.cache
