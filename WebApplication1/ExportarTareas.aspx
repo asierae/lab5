@@ -48,10 +48,9 @@
                 <li><a href="/Estadisticas.aspx"><i class="fa fa-table fa-fw"></i>Estadisticas</a></li>
                 <li><a href="/InsertarTarea.aspx"><i class="fa fa-tasks fa-fw"></i>Insertar tarea</a></li>
                 <li><a href="ImportarTareasXMLDocument.aspx"><i class="fa fa-calendar fa-fw"></i>Importar Tareas(XMLDocument)</a></li>
+                <li><a href="/ImportarVDataset.aspx">ImportarTareas(DataSet)</a></li>
                 <li><a href="ExportarTareas.aspx"><i class="fa fa-book fa-fw"></i>Exportar Tareas</a></li>
-                <li><a href="#"><i class="fa fa-pencil fa-fw"></i>Expprtar Tareas JSON</a></li>
-                <li></li>
-                <li><a href="#">Opcion2</a></li>
+                <li><a href="#">OpcionFuture</a></li>
             </ul>
         </div>
         <div id="contenido" class="col-md-9 well">
@@ -62,13 +61,14 @@
             Asignaturas:<br />
             <asp:DropDownList ID="DropDownList1" CssClass="form-control" Width="300px" runat="server" AutoPostBack="True"></asp:DropDownList>
             <br />
-                    <table>
-                        <tr>
+                 
+                        
             <asp:Button ID="Button1" CssClass="btn btn-default" runat="server" Text="Exportar a XML" />
-            </tr><tr>
-                            <asp:Button ID="Button3" CssClass="btn btn-default" runat="server" Text="XML ns" Height="33px" Width="102px" />
-                        </tr></table>
-            <asp:Button ID="Button2" CssClass="btn btn-default"  runat="server" Text="Exportar a JSON" />
+            <br />
+                        
+                    <asp:Button ID="Button3" CssClass="btn btn-default" runat="server" Text="XML ns" Height="33px" Width="102px" />
+           <br />
+                     <asp:Button ID="Button2" CssClass="btn btn-default"  runat="server" Text="Exportar a JSON" />
             <br />
             <br />
             <asp:Label ID="Label1" runat="server"></asp:Label>

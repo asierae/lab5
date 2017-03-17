@@ -1,1 +1,51 @@
-[{"Codigo":"aaa","Descripcion":"aaa","CodAsig":"EDA1","HEstimadas":12,"Explotacion":true,"TipoTarea":"Laboratorio"},{"Codigo":"EDA07-Ej1","Descripcion":"Ejercicio sobre listas ligadas","CodAsig":"EDA1","HEstimadas":4,"Explotacion":true,"TipoTarea":"Ejercicio"},{"Codigo":"EDA13","Descripcion":"examen","CodAsig":"EDA1","HEstimadas":12,"Explotacion":true,"TipoTarea":"Examen"},{"Codigo":"EX-123","Descripcion":"examen","CodAsig":"EDA1","HEstimadas":3,"Explotacion":true,"TipoTarea":"Examen"},{"Codigo":"HAS","Descripcion":"asdasdasdasd2","CodAsig":"EDA1","HEstimadas":2,"Explotacion":true,"TipoTarea":"Laboratorio"},{"Codigo":"Tarea InsertarTarea Prueba2","Descripcion":"Prueba2.1","CodAsig":"EDA1","HEstimadas":10,"Explotacion":true,"TipoTarea":"Ejercicio"}]
+<?xml version="1.0" standalone="yes"?>
+<tareas xmlns:eda1="http://ji.ehu.es/eda1">
+  <tarea>
+    <Codigo>aaa</Codigo>
+    <Descripcion>aaa</Descripcion>
+    <CodAsig>EDA1</CodAsig>
+    <HEstimadas>12</HEstimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Laboratorio</TipoTarea>
+  </tarea>
+  <tarea>
+    <Codigo>EDA07-Ej1</Codigo>
+    <Descripcion>Ejercicio sobre listas ligadas</Descripcion>
+    <CodAsig>EDA1</CodAsig>
+    <HEstimadas>4</HEstimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Ejercicio</TipoTarea>
+  </tarea>
+  <tarea>
+    <Codigo>EDA13</Codigo>
+    <Descripcion>examen</Descripcion>
+    <CodAsig>EDA1</CodAsig>
+    <HEstimadas>12</HEstimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Examen</TipoTarea>
+  </tarea>
+  <tarea>
+    <Codigo>EX-123</Codigo>
+    <Descripcion>examen</Descripcion>
+    <CodAsig>EDA1</CodAsig>
+    <HEstimadas>3</HEstimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Examen</TipoTarea>
+  </tarea>
+  <tarea>
+    <Codigo>HAS</Codigo>
+    <Descripcion>asdasdasdasd2</Descripcion>
+    <CodAsig>EDA1</CodAsig>
+    <HEstimadas>2</HEstimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Laboratorio</TipoTarea>
+  </tarea>
+  <tarea>
+    <Codigo>Tarea InsertarTarea Prueba2</Codigo>
+    <Descripcion>Prueba2.1</Descripcion>
+    <CodAsig>EDA1</CodAsig>
+    <HEstimadas>10</HEstimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Ejercicio</TipoTarea>
+  </tarea>
+</tareas>

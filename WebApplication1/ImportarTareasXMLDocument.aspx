@@ -48,10 +48,9 @@
                 <li><a href="/Estadisticas.aspx"><i class="fa fa-table fa-fw"></i>Estadisticas</a></li>
                 <li><a href="/InsertarTarea.aspx"><i class="fa fa-tasks fa-fw"></i>Insertar tarea</a></li>
                 <li><a href="ImportarTareasXMLDocument.aspx"><i class="fa fa-calendar fa-fw"></i>Importar Tareas(XMLDocument)</a></li>
+                <li><a href="/ImportarVDataset.aspx">ImportarTareas(DataSet)</a></li>
                 <li><a href="ExportarTareas.aspx"><i class="fa fa-book fa-fw"></i>Exportar Tareas</a></li>
-                <li><a href="#"><i class="fa fa-pencil fa-fw"></i>Expprtar Tareas JSON</a></li>
-                <li></li>
-                <li><a href="#">Opcion2</a></li>
+                <li><a href="#">OpcionFuture</a></li>
             </ul>
         </div>
         <div id="contenido" class="col-md-9 well">
@@ -80,12 +79,22 @@
             <br />
             <br />
              <asp:Button ID="Button1" CssClass="btn btn-default" runat="server" Text="Importar Tareas XMLD" />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+        &nbsp;&nbsp;&nbsp;&nbsp;<br />
+            <br />
+            &nbsp;&nbsp;&nbsp;      
         </td>
         </table>
         
+            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False">XSLT Sort Código</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="LinkButton3" runat="server" CausesValidation="False">XSLT Sort HEstim</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="LinkButton4" runat="server" CausesValidation="False">XSLT Sort Descrip</asp:LinkButton>
+        
         </div>
               </div>
+     
+        
      
     </form>
     <p>

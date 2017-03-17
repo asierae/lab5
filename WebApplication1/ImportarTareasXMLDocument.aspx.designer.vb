@@ -66,4 +66,31 @@ Partial Public Class ImportarTareasXMLDocument
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control LinkButton1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents LinkButton1 As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''Control LinkButton3.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents LinkButton3 As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''Control LinkButton4.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents LinkButton4 As Global.System.Web.UI.WebControls.LinkButton
 End Class

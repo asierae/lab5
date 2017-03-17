@@ -92,6 +92,9 @@
     <Content Include="App_Data\HAS.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\OrdenarCodigo.xsl" />
+    <Content Include="App_Data\OrdenarDescripcion.xsl" />
+    <Content Include="App_Data\OrdenarHestimadas.xsl" />
     <Content Include="App_Data\SEG.xml" />
     <Content Include="App_Data\XSLTFile.xsl" />
     <Content Include="CambiarPassword.aspx" />

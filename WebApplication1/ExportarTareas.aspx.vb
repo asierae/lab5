@@ -13,7 +13,12 @@ Public Class ExportarTareas
     Dim tbTareas As DataTable
     Dim tbTareasAsig As DataTable
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Session("username") = "vadillo@ehu.es"
+        If Session("logged") = False Then
+            Response.Redirect("Inicio.aspx?msj= Debes estar logueado para acceder")
+        ElseIf Session("role") = "A" Then
+            Response.Write("No Estas Autorizado para acceder a este reurso <a href='/Inicio.aspx'>Inicio</a>")
+            Response.End()
+        End If
         If Not IsPostBack Then
 
             '' Cargar Lista Asignaturas, con el procedimiento almacenado no porque tarda y falla el selectedvalue
@@ -54,13 +59,17 @@ Public Class ExportarTareas
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Session("dst_T2A").Tables("TareasGenericas").TableName = "tarea"
+        Session("dst_T2A").DataSetName = "tareas"
+
         Try
+
             Session("dst_T2A").WriteXml(Server.MapPath((DropDownList1.SelectedValue & ".xml")))
             Label1.Text = "Tareas exportadas con exito a " & DropDownList1.SelectedValue & ".xml"
         Catch ex As Exception
             Label1.Text = "Error al exportar las tareas a XML"
         End Try
-
+        Session("dst_T2A").Tables("tarea").TableName = "TareasGenericas"
     End Sub
 
     Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged
@@ -81,21 +90,22 @@ Public Class ExportarTareas
     End Sub
 
     Protected Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim tabla As DataTable = New DataTable(Session("dst_T2A").Table("TareasGenericas"))
+        Dim ds As DataSet
+        Session("dst_T2A").Tables("TareasGenericas").TableName = "tarea"
+        Session("dst_T2A").DataSetName = "tareas"
+        Try
 
-        Dim settings As XmlWriterSettings = New XmlWriterSettings()
-        settings.Indent = True
-        ' añade sangrias al resultado
-        Using writer As XmlWriter = XmlWriter.Create(Server.MapPath((DropDownList1.SelectedValue & ".xml")), settings)
-            'Cabecera
-            writer.WriteStartDocument()
-            ''AQUI LE AÑADO EL NS
-            writer.WriteStartElement("tareas", "http://ji.ehu.es/" & DropDownList1.SelectedValue.ToLower)
-            'recorremos tabla
-            For Each x As DataRow In tabla.Rows
+            Session("dst_T2A").WriteXml(Server.MapPath((DropDownList1.SelectedValue & ".xml")))
+            Label1.Text = "Tareas exportadas con exito a " & DropDownList1.SelectedValue & ".xml"
+        Catch ex As Exception
+            Label1.Text = "Error al exportar las tareas a XML"
+        End Try
+        Dim xd As XmlDocument = New XmlDocument()
+        xd.Load(Server.MapPath((DropDownList1.SelectedValue & ".xml")))
+        xd.DocumentElement.SetAttribute("xmlns:" & DropDownList1.SelectedValue.ToLower, "http://ji.ehu.es/" & DropDownList1.SelectedValue.ToLower)
 
-            Next
-        End Using
+        xd.Save((Server.MapPath(DropDownList1.SelectedValue & ".xml")))
+        Session("dst_T2A").Tables("tarea").TableName = "TareasGenericas"
     End Sub
 
     Protected Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
