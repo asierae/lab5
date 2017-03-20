@@ -6,3 +6,5 @@ C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\Email\obj
 C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\Email\obj\Release\Email.dll
 C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\Email\obj\Release\Email.xml
 C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\Email\obj\Release\Email.pdb
+C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\Email\bin\Release\Newtonsoft.Json.dll
+C:\Users\Asierae\Documents\Visual Studio 2013\Projects\WebApplication1\Email\bin\Release\Newtonsoft.Json.xml

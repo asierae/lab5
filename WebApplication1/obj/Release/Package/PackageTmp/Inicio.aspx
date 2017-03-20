@@ -30,7 +30,7 @@
                         <form id="loginform" class="form-horizontal" role="form">
                             <div class="input-group" style="margin-bottom: 35px" >
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Width="250px" placeholder="Tu email" BorderColor="#99CCFF" ViewStateMode="Enabled"></asp:TextBox>
+                                <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Width="250px" placeholder="Tu email" BorderColor="#99CCFF" ViewStateMode="Enabled"></asp:TextBox><br />
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox1" ErrorMessage="Introduce un email" ForeColor="Red"></asp:RequiredFieldValidator>
                                 <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Introduce un Email válido" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                             </div>
@@ -38,7 +38,7 @@
                             <br />
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" Width="250px" placeholder="Password" BorderColor="#99CCFF" TextMode="Password"></asp:TextBox>
+                                <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" Width="250px" placeholder="Password" BorderColor="#99CCFF" TextMode="Password"></asp:TextBox><br />
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox2" ErrorMessage="Introduce un Password" ForeColor="Red"></asp:RequiredFieldValidator>
                             </div>
                             <asp:Literal ID="Literal1" runat="server"></asp:Literal>

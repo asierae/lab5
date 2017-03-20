@@ -37,7 +37,7 @@ Public Class ImportarVDataset
             conectar()
             st = "Select * FROM TareasGenericas WHERE CodAsig='" & DropDownList1.SelectedValue & "'"
             dapt = New SqlDataAdapter(st, conexion)
-            Dim bldMbrs As New SqlCommandBuilder(dapt) ''Necesaqrio?
+            Dim bldMbrs As New SqlCommandBuilder(dapt)
             dst = New DataSet()
             dapt.Fill(dst, "TareasGenericas") ''cargamos la tabla
             Session("dapt_tg") = dapt
@@ -62,29 +62,34 @@ Public Class ImportarVDataset
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         If File.Exists(Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml")) Then
+            Label1.ForeColor = Drawing.Color.Black
             Label1.Text = ""
             Dim ds As New DataSet
             ds.ReadXml(Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml"))
-
+            Dim bldMbrs As New SqlCommandBuilder(Session("dapt"))
             Dim tmp As DataColumn = New DataColumn
             tmp.ColumnName = "CodAsig"
             tmp.DefaultValue = DropDownList1.SelectedValue
             ds.Tables(0).Columns.Add(tmp)
             ds.Tables(0).Columns("Codigo").Unique = True
+
             Try
-                GridView1.DataSource = ds.Tables(0)
+                GridView1.DataSource = Session("dst_tg").Tables(0)
                 GridView1.DataBind()
             Catch ex As Exception
+                Label1.ForeColor = Drawing.Color.Red
                 Label1.Text = "Hay tareas con el mismo codigo, no se pueden insertar"
             End Try
 
 
             Try
-                Session("dapt_tg").update(Session("dst_tg"), "TareasGenericas")
+                Session("dapt_tg").update(ds.Tables(0))
                 Session("dst_tg").AcceptChanges()
                 Label1.Text = "Tareas Añadidas con exito :)"
             Catch ex As Exception
-                Label1.Text = "Hay tareas con el mismo codigo, no se pueden insertar"
+                Label1.Text = "Hay tareas con el cógigo clave repetído en el xml"
+                'Label1.Text = ex.Message
+
             End Try
 
         Else
@@ -103,7 +108,7 @@ Public Class ImportarVDataset
         conectar()
         Dim st = "Select * FROM TareasGenericas WHERE CodAsig='" & DropDownList1.SelectedValue & "'"
         dapt = New SqlDataAdapter(st, conexion)
-        Dim bldMbrs As New SqlCommandBuilder(dapt) ''Necesaqrio?
+        Dim bldMbrs As New SqlCommandBuilder(Session("dapt_tg")) ''Necesaqrio?
         dst = New DataSet()
         dapt.Fill(dst, "TareasGenericas") ''cargamos la tabla
         Session("dapt_tg") = dapt
@@ -121,7 +126,7 @@ Public Class ImportarVDataset
         conectar()
         Dim st = "Select * FROM TareasGenericas WHERE CodAsig='" & DropDownList1.SelectedValue & "'"
         dapt = New SqlDataAdapter(st, conexion)
-        Dim bldMbrs As New SqlCommandBuilder(dapt) ''Necesaqrio?
+        Dim bldMbrs As New SqlCommandBuilder(dapt)
         dst = New DataSet()
         dapt.Fill(dst, "TareasGenericas") ''cargamos la tabla
         Session("dapt_tg") = dapt
