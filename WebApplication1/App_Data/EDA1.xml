@@ -1,0 +1,52 @@
+<?xml version="1.0" standalone="yes"?>
+<tareas>
+  <tarea>
+    <codigo>aaa</codigo>
+    <descripcion>aaa</descripcion>
+    <hestimadas>12</hestimadas>
+    <explotacion>true</explotacion>
+    <tipotarea>Laboratorio</tipotarea>
+  </tarea>
+  <tarea>
+    <codigo>EDA07-Ej1</codigo>
+    <descripcion>Ejercicio sobre listas ligadas</descripcion>
+    <hestimadas>4</hestimadas>
+    <explotacion>true</explotacion>
+    <tipotarea>Ejercicio</tipotarea>
+  </tarea>
+  <tarea>
+    <codigo>EDA13</codigo>
+    <descripcion>examen</descripcion>
+    <hestimadas>12</hestimadas>
+    <explotacion>true</explotacion>
+    <tipotarea>Examen</tipotarea>
+  </tarea>
+  <tarea>
+    <codigo>EX-123</codigo>
+    <descripcion>examen</descripcion>
+    <hestimadas>3</hestimadas>
+    <explotacion>true</explotacion>
+    <tipotarea>Examen</tipotarea>
+  </tarea>
+  <tarea>
+    <codigo>HAS</codigo>
+    <descripcion>asdasdasdasd2</descripcion>
+    <hestimadas>2</hestimadas>
+    <explotacion>true</explotacion>
+    <tipotarea>Laboratorio</tipotarea>
+  </tarea>
+  <tarea>
+    <codigo>pruebalab5</codigo>
+    <descripcion>dfsdfsdf</descripcion>
+    <hestimadas>123</hestimadas>
+    <explotacion>true</explotacion>
+    <tipotarea>Laboratorio</tipotarea>
+  </tarea>
+  <tarea>
+    <codigo>Tarea InsertarTarea Prueba2</codigo>
+    <descripcion>Prueba2.1</descripcion>
+    <hestimadas>10</hestimadas>
+    <explotacion>true</explotacion>
+    <tipotarea>Ejercicio</tipotarea>
+  </tarea>
+</tareas>

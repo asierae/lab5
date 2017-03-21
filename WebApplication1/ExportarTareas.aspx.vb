@@ -37,7 +37,7 @@ Public Class ExportarTareas
 
             '' Cargar Lista Tareas
             conectar()
-            st = "SELECT * FROM TareasGenericas WHERE CodAsig='" & DropDownList1.SelectedValue & "'"
+            st = "SELECT codigo,descripcion,hestimadas,explotacion,tipotarea FROM TareasGenericas WHERE CodAsig='" & DropDownList1.SelectedValue & "'"
             'cojo todas las de ese profesor y luego filtro por codAsig para acceder solo una vez
             'st = "SELECT TareasGenericas.Codigo, TareasGenericas.CodAsig, TareasGenericas.Descripcion, TareasGenericas.Explotacion, TareasGenericas.HEstimadas, TareasGenericas.TipoTarea FROM ((TareasGenericas INNER JOIN GruposClase ON TareasGenericas.CodAsig=GruposClase.codigoasig) INNER JOIN ProfesoresGrupo ON GruposClase.codigo=ProfesoresGrupo.codigogrupo) WHERE ProfesoresGrupo.email='" & Session("username") & "' and CodAsig in(SELECT codigoasig FROM ((GruposClase INNER JOIN ProfesoresGrupo ON email='" & Session("username") & "'and codigogrupo=codigo)))"
             dapt = New SqlDataAdapter(st, conexion)
@@ -62,12 +62,14 @@ Public Class ExportarTareas
         Session("dst_T2A").Tables("TareasGenericas").TableName = "tarea"
         Session("dst_T2A").DataSetName = "tareas"
 
+
         Try
 
-            Session("dst_T2A").WriteXml(Server.MapPath((DropDownList1.SelectedValue & ".xml")))
+            Session("dst_T2A").WriteXml(Server.MapPath(("./App_Data/" & DropDownList1.SelectedValue & ".xml")))
             Label1.Text = "Tareas exportadas con exito a " & DropDownList1.SelectedValue & ".xml"
         Catch ex As Exception
-            Label1.Text = "Error al exportar las tareas a XML"
+            Label1.Text = ex.Message
+            'Label1.Text = "Error al exportar las tareas a XML"
         End Try
         Session("dst_T2A").Tables("tarea").TableName = "TareasGenericas"
     End Sub
@@ -75,7 +77,7 @@ Public Class ExportarTareas
     Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged
         '' Cargar Lista Tareas
         conectar()
-        Dim st = "SELECT * FROM TareasGenericas WHERE CodAsig='" & DropDownList1.SelectedValue & "'"
+        Dim st = "SELECT codigo,descripcion,hestimadas,explotacion,tipotarea FROM TareasGenericas WHERE CodAsig='" & DropDownList1.SelectedValue & "'"
         dapt = New SqlDataAdapter(st, conexion)
         Dim bldMbrs As New SqlCommandBuilder(dapt) ''Necesario?
         dst = New DataSet()
@@ -95,7 +97,7 @@ Public Class ExportarTareas
         Session("dst_T2A").DataSetName = "tareas"
         Try
 
-            Session("dst_T2A").WriteXml(Server.MapPath((DropDownList1.SelectedValue & ".xml")))
+            Session("dst_T2A").WriteXml(Server.MapPath(("./App_Data/" & DropDownList1.SelectedValue & ".xml")))
             Label1.Text = "Tareas exportadas con exito a " & DropDownList1.SelectedValue & ".xml"
         Catch ex As Exception
             Label1.Text = "Error al exportar las tareas a XML"
